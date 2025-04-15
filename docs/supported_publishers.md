@@ -341,6 +341,23 @@
       <td>&#160;</td>
       <td>&#160;</td>
     </tr>
+    <tr>
+      <td>
+        <code>iRozhlas</code>
+      </td>
+      <td>
+        <div>iRozhlas</div>
+      </td>
+      <td>
+        <a href="https://www.irozhlas.cz/">
+          <span>www.irozhlas.cz</span>
+        </a>
+      </td>
+      <td>
+        <code>topics</code>
+      </td>
+      <td>&#160;</td>
+    </tr>
   </tbody>
 </table>
 

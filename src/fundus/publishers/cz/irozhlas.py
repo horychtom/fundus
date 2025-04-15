@@ -24,7 +24,8 @@ class iRozhlasParser(ParserProxy):
         _paragraph_selector = XPath(
             "//article//div[@class='b-detail']/p[not(contains(@class, 'meta'))]"
         )
-        _summary_selector = XPath("//header/p[contains(@class, 'text-lg')]")
+        _summary_selector = XPath("//header/*[self::p or self::ul][contains(@class, 'text-lg')]")
+        # TODO: interview articles have p > strong as sort of headlines, add them
         _subheadline_selector = XPath("//article//div[@class='b-detail']//h2")
 
         @attribute
@@ -56,6 +57,7 @@ class iRozhlasParser(ParserProxy):
 
         @attribute
         def images(self) -> List[Image]:
+            # TODO width extraction doesnt work
             return image_extraction(
                 doc=self.precomputed.doc,
                 paragraph_selector=self._paragraph_selector,
